@@ -5,6 +5,10 @@ const Home = () => {
   const [jobs] = useState([
     { id: 1, title: "Frontend Developer", company: "TechNepal", location: "Kathmandu", salary: "Rs. 80,000" },
     { id: 2, title: "Backend Developer", company: "CodeArt", location: "Pokhara", salary: "Rs. 70,000" },
+    { id: 3, title: "Frontend Developer", company: "TechNepal", location: "Kathmandu", salary: "Rs. 80,000" },
+    { id: 4, title: "Backend Developer", company: "CodeArt", location: "Pokhara", salary: "Rs. 70,000" },
+    { id: 5, title: "Frontend Developer", company: "TechNepal", location: "Kathmandu", salary: "Rs. 80,000" },
+    { id: 6, title: "Backend Developer", company: "CodeArt", location: "Pokhara", salary: "Rs. 70,000" },
   ]);
 
   return (
