@@ -1,16 +1,17 @@
 const mongoose = require('mongoose');
-const express = require('express');
-const e = require('express');
 
 const userSchema = new mongoose.Schema({
     fullname: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        lowercase: true,
+        trim: true
     },
     password: {
         type: String,
@@ -19,10 +20,11 @@ const userSchema = new mongoose.Schema({
     role: {
         type: String,
         required: true,
-        enum: ['users', 'company', 'admin'],
-        default: 'users'
-    },
-
+        enum: ['user', 'company', 'admin'],
+        default: 'user'
+    }
+}, {
+    timestamps: true
 });
 
 const User = mongoose.model('User', userSchema);
